@@ -20,6 +20,11 @@ app.get('/test-cors', function(req, res) {
   res.status(200).send('CORS enabled');
 });
 
+const server = app.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});
+
+
 describe('CORS middleware', () => {
   test('It should set the correct CORS headers', async () => {
     const response = await request(app).get('/test-cors');
@@ -39,6 +44,6 @@ describe('CORS middleware', () => {
 
 afterAll(async () => {
   // Close app to avoid jest open handle error
-  app.close();
+  server.close();
 });
 

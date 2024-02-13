@@ -32,14 +32,6 @@
     "supertest": "6.3.3"
   },
   "homepage": "https://github.com//backend#readme",
-  "jest": {
-    "testPathIgnorePatterns": [
-      "models",
-      "routes",
-      "schemas",
-      "services"
-    ]
-  },
   "license": "MIT",
   "main": "index.js",
   "name": "examportalbackend",
